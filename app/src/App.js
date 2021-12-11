@@ -79,6 +79,10 @@ function App(props) {
 
   const uploaderOnChange = (e) => {
     setImage(e.target.files[0])
+    
+  }
+
+  const uploadImage = ()=>{
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", "tutorial")
@@ -238,6 +242,7 @@ function App(props) {
             addShow={addShow}
             handleAddClose={handleAddClose}
             uploaderOnChange={uploaderOnChange}
+            uploadImage = {uploadImage}
             url={url}
             singledata={singledata}
             handleChange={handleChange}

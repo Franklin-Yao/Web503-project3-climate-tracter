@@ -4,7 +4,7 @@ import {CloudinaryContext, Image} from "cloudinary-react"
 import ImageUploader from "./uploadImage";
 
 function CreatList(props){
-    const {addShow, handleAddClose,uploaderOnChange, url, singledata, handleChange,createList} = props
+    const {addShow, handleAddClose,uploaderOnChange,uploadImage, url, singledata, handleChange,createList} = props
     const [validated, setValidated] = useState(false);
     const handleSubmit = (e)=>{
         const form = e.currentTarget;
@@ -68,7 +68,7 @@ function CreatList(props){
                             <Form.Label>Descriptions</Form.Label>
                             <Form.Control as="textarea" rows={3} placeholder="Describe what is happening..." name="descriptions" value={singledata.title} onChange={handleChange}/>
                         </Form.Group>
-                        <ImageUploader uploaderOnChange={uploaderOnChange} url={url}/>
+                        <ImageUploader uploaderOnChange={uploaderOnChange} uploadImage={uploadImage} url={url}/>
                         <div className="d-flex justify-content-end">
                             <Button className="mr-5" variant="success" type="submit">Submit</Button>
                             <Button className="ml-5" variant="secondary" onClick={handleAddClose}>Cancel</Button>
