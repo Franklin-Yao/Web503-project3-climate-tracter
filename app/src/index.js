@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './App.css';
 import 'leaflet/dist/leaflet.css';
-import Home from './Home';
-import Lists from './Lists';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
@@ -13,7 +12,7 @@ import {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

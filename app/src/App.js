@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./index.css";
-import EventsMap from "./Map";
+import "./App.css";
 import FacebookLogin from "react-facebook-login";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Dropdown, Modal, Button, Toast, ToastContainer } from "react-bootstrap";
+import { Dropdown, Modal, Button } from "react-bootstrap";
 import CreatList from "./CreatList";
 import Lists from "./Lists";
 import MapPage from "./MapPage";
 
 import {
-  Link,BrowserRouter as Router,Routes,Route,
+  Link,BrowserRouter as Router,Routes,Route
 } from 'react-router-dom';
 
-function Home(props) {
+function App(props) {
   const [login, setLogin] = useState(false);
   const [data, setData] = useState({});
   const [fbpic, setPicture] = useState('')
@@ -264,7 +263,7 @@ function Home(props) {
 
       <Routes>
         <Route path="/" element={<MapPage handleMapChange={handleMapChange} filteredData={filteredData} loading={loading}/>}/>
-        <Route path="/myevents" element={!loading && <Lists 
+        <Route path="/myevents" element={!loading &&login && <Lists 
           alldata={myData}
           singledata={singledata}
           deleteList = {deleteList}
@@ -276,4 +275,4 @@ function Home(props) {
   )
 }
 
-export default Home;
+export default App;
