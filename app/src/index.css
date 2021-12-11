@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header{
+  background-color: white;
+}
+header img{
+  height: 3em;
+  width: auto;
+}
+
+#banner{
+  min-height: 60vh;
+  background-image: url("imgs/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  padding-left: 5vh;
+}
+#banner .content{
+  background: white;
+  padding: 15px;
+  width: 40vw;
+  border-radius: 3px;
+  margin-left: 3vw;
+}
+#banner h3{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#map{
+  margin: 2vh 12vh;
+  margin-bottom: 5vh;
+}
+#map h3{
+  text-align: center;
+  font-size: 2rem;
+}
+#map select{
+  width: 20vw;
+}
+#map-container{
+  text-align: center;
+  margin-top: 2vh;
+  min-height: 80vh;
+}
+
+#fb-name{
+  color: #1f89c8;
+  font-size: 1.35em;
+  font-weight: 700;
+  line-height: 1.15em;
+}
+.bg-white{
+  color: black !important;
+  background-color: white !important;
+  border-color: rgb(199, 194, 185) !important;
+}
+
+.custom-dialog {
+  margin-top: 20vh;
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+a:hover {
+   color: #00F
+}
