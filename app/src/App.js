@@ -79,7 +79,6 @@ function App(props) {
 
   const uploaderOnChange = (e) => {
     setImage(e.target.files[0])
-    
   }
 
   const uploadImage = ()=>{

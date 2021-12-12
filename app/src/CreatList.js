@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Modal, Button,Form} from "react-bootstrap"
 import {CloudinaryContext, Image} from "cloudinary-react"
-import ImageUploader from "./uploadImage";
+import ImageUploader from "./ImageUploader";
 
 function CreatList(props){
     const {addShow, handleAddClose,uploaderOnChange,uploadImage, url, singledata, handleChange,createList} = props
@@ -23,7 +23,7 @@ function CreatList(props){
                     <Modal.Title>Report an event</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                    <Form noValidate validated={validated} onSubmit={(e)=>{e.preventDefault();e.stopPropagation();}}>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Event Type</Form.Label>
                             <Form.Select required name="event_type" aria-label="Default select example" onChange={handleChange}>
@@ -70,7 +70,7 @@ function CreatList(props){
                         </Form.Group>
                         <ImageUploader uploaderOnChange={uploaderOnChange} uploadImage={uploadImage} url={url}/>
                         <div className="d-flex justify-content-end">
-                            <Button className="mr-5" variant="success" type="submit">Submit</Button>
+                            <Button className="mr-5" variant="success" onClick={handleSubmit}>Submit</Button>
                             <Button className="ml-5" variant="secondary" onClick={handleAddClose}>Cancel</Button>
                         </div>
                     </Form>
